@@ -78,7 +78,7 @@ module.exports = {
 	},
 
 	fetch : (url, callback) => {
-		let repoName = gitHubApiRepoName(url);
+		/*let repoName = gitHubApiRepoName(url);
 		if(repoName != null) {
 			let sourceData = new SourceData();
 			async.parallel([
@@ -131,23 +131,23 @@ module.exports = {
 				}
 				// TODO: Handle error case
 			});
-		}
+		}*/
 
-		// var sourceData = new SourceData();
-		// sourceData.name = 'Project Name';
-		// sourceData.authors = [
-		// 	{firstName :'Eric', lastName : 'Lee', email :'abc@rit.edu'},
-		// 	{firstName :'Colin', lastName : 'O\'Neill', email :'def@rit.edu'}
-		// ];
-		// sourceData.version = '1.0';
-		// sourceData.releaseDate = new Date();
-		// sourceData.url = url;
-		// sourceData.licence = 'MIT';
-		// sourceData.description = 'This is a test project';
-		// sourceData.uid = null;
-		// console.log(sourceData);
+		var sourceData = new SourceData();
+		 sourceData.name = 'Project Name';
+		sourceData.authors = [
+			{firstName :'Eric', lastName : 'Lee', email :'abc@rit.edu'},
+			{firstName :'Colin', lastName : 'O\'Neill', email :'def@rit.edu'}
+		];
+		sourceData.version = '1.0';
+		sourceData.releaseDate = new Date();
+		sourceData.url = url;
+		sourceData.licence = 'MIT';
+		sourceData.description = 'This is a test project';
+		sourceData.uid = null;
+//		console.log(sourceData);
 
-		// var messages = []
-		// callback(sourceData, messages)
+		var messages = []
+		callback(sourceData, messages)
 	}
 };
